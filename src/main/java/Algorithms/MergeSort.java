@@ -39,8 +39,7 @@ public class MergeSort {
             if ( secondPointer > right) {
                 if (mergeRegister.isEmpty()) {
                     secondPointer++;
-                    continue;
-                } else if (!mergeRegister.isEmpty()) {
+                } else {
                     if(list.get(firstPointer) != null)
                         mergeRegister.add(list.get(firstPointer));
                     list.set(firstPointer, mergeRegister.poll());
@@ -59,7 +58,7 @@ public class MergeSort {
                     firstPointer++;
                     secondPointer++;
                 }
-            } else if (mergeRegister.isEmpty()) {
+            } else {
                 if (list.get(firstPointer) <= list.get(secondPointer)) {
                     firstPointer++;
                 } else {
